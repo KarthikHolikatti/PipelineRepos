@@ -29,7 +29,7 @@ node{
 
                     //send an email that the build has failed
                     mail body: "Project build error: ${err}" ,
-                      from: 'Karthik.Holikatti@oneadvanced.com,
+                      from: 'Karthik.Holikatti@oneadvanced.com',
                       replyTo: 'Karthik.Holikatti@oneadvanced.com',
                       subject: "failed",
                       to: 'Karthik.Holikatti@oneadvanced.com'
