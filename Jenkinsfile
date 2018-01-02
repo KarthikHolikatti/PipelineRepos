@@ -8,21 +8,21 @@ node{
 		    	   
                   parallel d: {
                      echo 'intitialize'
-                     bat "nant init"
+                     bat "ant init"
                      }, b:{
                      echo 'Building..propertynames'
-                     bat "nant Propertynames"
+                     bat "ant Propertynames"
                      },e:{
 			  try {
           currentBuild.result = "SUCCESS"
 				  
                      echo 'Building..methods'
-                     bat "nant init"
+                     bat "ant init"
 				  
 	     }//try    
 			  catch (Exception err) {
                     currentBuild.result = "FAILURE"
-			                     bat "nant build"
+			                     bat "ant build"
                     //hipchat message that the build has failed
                     def errorMessage = "defining message"
                     //hipchatSend color: 'RED', message: errorMessage
@@ -42,7 +42,7 @@ node{
 	    }      
 		     },g:{
                      echo 'Building..methods'
-                     bat "nant methodTest10"
+                     bat "ant methodTest10"
                      } 
 	    }
                     
